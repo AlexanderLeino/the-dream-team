@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+#myTeam {
+    text-align: center;
+    background-color: coral;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+
+}
+body{
+    background-color: cornflowerblue;
+}
