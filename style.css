@@ -18,6 +18,12 @@ a ul {
 a ul li {
     text-decoration: none;
 }
+
+.card {
+    border: black 3px solid;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    background-color: lightgoldenrodyellow;
+}
 #myTeam {
     text-align: center;
     background-color: coral;

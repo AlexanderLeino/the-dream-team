@@ -154,6 +154,7 @@ function getIntern () {
 
 function endCreation(employeeArray) {
     console.log(employeeArray[0].name)
+    
   const generatedHTML = `<!doctype html>
   <html lang="en">
     <head>
@@ -174,7 +175,7 @@ function endCreation(employeeArray) {
               <ul>
                 <li> Id:<span>${employeeArray[0].getId()}</span></li>
                 <li>Email Address: <a href="${employeeArray[0].getEmail()}" class="card-link">${employeeArray[0].getEmail()}</li></a>
-                <li>Office Number: <span>${employeeArray[0].officeNumber}</span>${employeeArray[0].officeNumber}</li>
+                <li>Office Number:>${employeeArray[0].officeNumber}</li>
               </ul>
             </div>
           </div>   
@@ -184,43 +185,41 @@ function endCreation(employeeArray) {
           
           <div class="card" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Engineer Name</h5>
-              <h6 class="card-subtitle mb-2 text-muted">title Engineer</h6>
+              <h5 class="card-title">${employeeArray[1].name}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">${employeeArray[1].getRole()}</h6>
               <ul>
-                <li>Id:<span>actual idea goes here</span></li>
-                <li>Email:<a href="#" class="card-link">Actual Email Address</a></li>
-                <li>GitHub<a href="#" class="card-link">Another link</a></li>
+                <li>Id:<span>${employeeArray[1].getId()}</span></li>
+                <li>Email:<a href="${employeeArray[1].getEmail()}" class="card-link">${employeeArray[1].getEmail()}</a></li>
+                <li>GitHub<a href="${employeeArray[1].getGitHub()}" class="card-link">${employeeArray[1].getGitHub()}</a></li>
               </ul>
             </div>
           </div>
   
-         <div class="card ms-2" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Engineer Name</h5>
-              <h6 class="card-subtitle mb-2 text-muted">title Engineer</h6>
-              <ul>
-                <li>Id:<span>actual idea goes here</span></li>
-                <li>Email:<a href="#" class="card-link">Actual Email Address</a></li>
-                <li>GitHub<a href="#" class="card-link">Another link</a></li>
-              </ul>
-            </div>   
+          <div class="card ms-2" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">${employeeArray[2].name}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${employeeArray[2].getRole()}</h6>
+            <ul>
+              <li>Id:<span>${employeeArray[2].getId()}</span></li>
+              <li>Email:<a href="${employeeArray[2].getEmail()}" class="card-link">${employeeArray[2].getEmail()}</a></li>
+              <li>GitHub<a href="${employeeArray[2].getGitHub()}" class="card-link">${employeeArray[2].getGitHub()}</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
+    </div>
   
         <div class="container-fluid justify-content-center d-flex mt-3">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">name of intern</h5>
-              <h6 class="card-subtitle mb-2 text-muted">intern title</h6>
-              <ul>
-                <li>Id:<span>actual ID:</span></li>
-                <li>Email:<a href="#" class="card-link">actual email</a> </li>
-                <li>GitHub<a href="#" class="card-link">actual GitHub</a></li>
-              </ul>
-              
-              
-            </div>
-          </div>   
+        <div class="card ms-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">${employeeArray[3].name}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">${employeeArray[2].getRole()}</h6>
+          <ul>
+            <li>Id:<span>${employeeArray[3].getId()}</span></li>
+            <li>Email:<a href="${employeeArray[3].getEmail()}" class="card-link">${employeeArray[3].getEmail()}</a></li>
+            <li>GitHub<a href="${employeeArray[3].getSchool()}" class="card-link">${employeeArray[3].getSchool()}</a></li>
+          </ul>
+        </div>
+      </div>
         </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
       <script src="../lib/htmlRender.js"></script>
