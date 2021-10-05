@@ -3,6 +3,21 @@
     padding: 0;
     width: 100%
 }
+h1 {
+    text-align: center;
+    background-color: coral;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+a ul {
+    text-decoration: none;
+}
+ a li {
+    text-decoration: none;
+}
+a ul li {
+    text-decoration: none;
+}
 #myTeam {
     text-align: center;
     background-color: coral;

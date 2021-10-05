@@ -11,7 +11,7 @@ const employeeArray = []
     
 function initalizeApp () {
     inquirer.prompt( [
-    // THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
+    // THEN I am prompted to enter the team manager’s name, ID:, email address, and office number
     {
         type: 'input',
         name: 'managersName',
@@ -21,7 +21,7 @@ function initalizeApp () {
     {
         type: 'input',
         name: 'managerId',
-        message: 'What is your employee ID?',
+        message: 'What is your ID:?',
     },
 
     {
@@ -90,7 +90,7 @@ function getEngineer() {
         {
             type: 'input',
             name: 'engineerId',
-            message: 'Whats is your engineers employee ID?'
+            message: 'Whats is your engineers ID:?'
         },
     
         {
@@ -127,7 +127,7 @@ function getIntern () {
         {
             type:'input',
             name:'internId',
-            message: 'What is your interns employee ID?',
+            message: 'What is your interns ID:?',
         },
     
         {
@@ -153,36 +153,82 @@ function getIntern () {
 
 
 function endCreation(employeeArray) {
-    console.log(employeeArray)
-  `<!doctype html>
+    console.log(employeeArray[0].name)
+  const generatedHTML = `<!doctype html>
   <html lang="en">
     <head>
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-  
-      <title>Hello, world!</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css">
+      <title>My Team's Organizational Structure</title>
     </head>
     <body>
-      <h1>${employeeArray[0].name}</h1>
+      <h1>The Dream Teams Organizational Structure</h1>
+        <div class="container-fluid justify-content-center d-flex">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">${employeeArray[0].name}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">${employeeArray[0].getRole()}</h6>
+              <ul>
+                <li> Id:<span>${employeeArray[0].getId()}</span></li>
+                <li>Email Address: <a href="${employeeArray[0].getEmail()}" class="card-link">${employeeArray[0].getEmail()}</li></a>
+                <li>Office Number: <span>${employeeArray[0].officeNumber}</span>${employeeArray[0].officeNumber}</li>
+              </ul>
+            </div>
+          </div>   
+        </div>
+        
+        <div class="container-fluid justify-content-center d-flex mt-3">
+          
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Engineer Name</h5>
+              <h6 class="card-subtitle mb-2 text-muted">title Engineer</h6>
+              <ul>
+                <li>Id:<span>actual idea goes here</span></li>
+                <li>Email:<a href="#" class="card-link">Actual Email Address</a></li>
+                <li>GitHub<a href="#" class="card-link">Another link</a></li>
+              </ul>
+            </div>
+          </div>
   
-      <!-- Optional JavaScript; choose one of the two! -->
+         <div class="card ms-2" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Engineer Name</h5>
+              <h6 class="card-subtitle mb-2 text-muted">title Engineer</h6>
+              <ul>
+                <li>Id:<span>actual idea goes here</span></li>
+                <li>Email:<a href="#" class="card-link">Actual Email Address</a></li>
+                <li>GitHub<a href="#" class="card-link">Another link</a></li>
+              </ul>
+            </div>   
+        </div>
+      </div>
   
-      <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
-  
-      <!-- Option 2: Separate Popper and Bootstrap JS -->
-      <!--
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
-      -->
+        <div class="container-fluid justify-content-center d-flex mt-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">name of intern</h5>
+              <h6 class="card-subtitle mb-2 text-muted">intern title</h6>
+              <ul>
+                <li>Id:<span>actual ID:</span></li>
+                <li>Email:<a href="#" class="card-link">actual email</a> </li>
+                <li>GitHub<a href="#" class="card-link">actual GitHub</a></li>
+              </ul>
+              
+              
+            </div>
+          </div>   
+        </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+      <script src="../lib/htmlRender.js"></script>
     </body>
   </html>
+  
   `
-  fs.writeFile('generatedTeam.HTML', function(err) {
+  fs.writeFile('generatedTeam.HTML',generatedHTML, function(err) {
       if (err) throw err
       console.log(err)
   })
