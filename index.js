@@ -36,6 +36,7 @@ function initalizeApp () {
 .then( answers => {
 const newManager = new Manager(answers.managersName, answers.managerId, answers.managerEmail, answers.managersPhoneNum)
 console.log(newManager)
+employeeArray.push(newManager)
 additionalEmployee()
 })
 }
@@ -106,6 +107,7 @@ function getEngineer() {
     .then(answers => {
         const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGit)
         console.log(engineer)
+        employeeArray.push(engineer)
         additionalEmployee()
     })   
 }
@@ -144,11 +146,13 @@ function getIntern () {
 .then(answers => {
     const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool)
     console.log(intern)
+    employeeArray.push(intern)
     additionalEmployee()
 })
 } 
 function endCreation() {
     console.log('The process has ended.')
+    console.log(employeeArray)
 }
 
 initalizeApp()
