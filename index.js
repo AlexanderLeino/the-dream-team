@@ -153,7 +153,6 @@ function getIntern () {
 
 
 function endCreation(employeeArray) {
-    const generateHTML = () =>
     console.log(employeeArray)
   `<!doctype html>
   <html lang="en">
@@ -183,7 +182,7 @@ function endCreation(employeeArray) {
     </body>
   </html>
   `
-  fs.writeFile('generatedTeam.HTML', generateHTML, function(err) {
+  fs.writeFile('generatedTeam.HTML', function(err) {
       if (err) throw err
       console.log(err)
   })
