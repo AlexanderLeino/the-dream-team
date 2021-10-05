@@ -3,6 +3,7 @@ const Employee = require('./lib/Employee')
 const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
+const fs = require('fs')
 
 const employeeArray = []
     
@@ -56,7 +57,6 @@ function additionalEmployee () {
 
 ])
 .then (answers => {
-    console.log(answers.addAnotherEmployeeQ)
     switch(answers.addAnotherEmployeeQ) {
         case 'engineer':
             getEngineer()
@@ -152,7 +152,5 @@ function getIntern () {
 } 
 function endCreation() {
     console.log('The process has ended.')
-    console.log(employeeArray)
 }
-
 initalizeApp()
